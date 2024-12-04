@@ -1,39 +1,36 @@
 import { useMemo, useState } from "react";
 
+const App = () => {
+  const [add, setAdd] = useState(0);
+  const [minuus, setMinus] = useState(100);
 
-const UseMemos = () => {
-  const [addition, setAddition] = useState(0);
-  const [sub, setSub] = useState(100);
-
-
-  const multiplication = useMemo(() => {
-    console.log("Multiplication calculation");
-    return addition * 10;
-  }, [addition]);
-
-
-  const handleAddition = () => {
-    setAddition(addition + 1);
+  const handlePlus = () => {
+    setAdd(add + 1);
   };
 
-
-  const handleSubtraction = () => {
-    setSub(sub - 1);
+  const handleMinus = () => {
+    setMinus(minuus - 1);
   };
 
+  const multiplication = useMemo(() =>{
+    console.log("hello");
+    
+    return add*10
+  }, [add])
 
   return (
     <>
-      {multiplication}
+      <div>{multiplication}</div>
       <br />
-      <button onClick={handleAddition}>Addition</button>
-      <span>{addition}</span>
+      <div>{add}</div>
       <br />
-      <button onClick={handleSubtraction}>Subtraction</button>
-      <span>{sub}</span>
+      <button onClick={handlePlus}>Plus</button>
+      <br />
+      <div>{minuus}</div>
+      <br />
+      <button onClick={handleMinus}>Minus</button>
     </>
   );
 };
 
-
-export default UseMemos;
+export default App;
