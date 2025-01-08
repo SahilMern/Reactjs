@@ -1,16 +1,24 @@
 
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+// import App from './App.jsx'
 import {  UserProvider } from './userContext/userContext.jsx'
-import Debouncing from './debouncing/Debouncing.jsx'
-import Test from './Test.jsx'
+// import Debouncing from './debouncing/Debouncing.jsx'
+// import Test from './Test.jsx'
+// import ParentEvent from './passingEventAsProps/ParentEvent.jsx'
+import LiftingStateUp from './lifting/LiftingStateUp.jsx'
+import Test from './Test/Test.jsx'
+import Aftermemo from './hooks/useMemo/Aftermemo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
 
     {/* <App /> */}
     {/* <Debouncing /> */}
-    <Test />
+    {/* <Test /> */}
+    {/* <ParentEvent /> */}
+    {/* <LiftingStateUp /> */}
+    {/* <Test /> */}
+    <Aftermemo />
   </UserProvider>
 )
