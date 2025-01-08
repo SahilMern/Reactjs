@@ -9,6 +9,7 @@ import {  UserProvider } from './userContext/userContext.jsx'
 import LiftingStateUp from './lifting/LiftingStateUp.jsx'
 import Test from './Test/Test.jsx'
 import Aftermemo from './hooks/useMemo/Aftermemo.jsx'
+import AfterCallback from './hooks/useCallback/AfterCallback.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
@@ -18,7 +19,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Test /> */}
     {/* <ParentEvent /> */}
     {/* <LiftingStateUp /> */}
-    {/* <Test /> */}
-    <Aftermemo />
+    {/* <Aftermemo /> */}
+    {/* <AfterCallback /> */}
+    <Test />
   </UserProvider>
 )

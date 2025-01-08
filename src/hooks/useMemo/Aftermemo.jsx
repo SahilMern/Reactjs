@@ -13,20 +13,20 @@ const Aftermemo = () => {
   };
 
   // The multiplication function will be re-calculated every render
-  // const multiplication = useMemo(() => {
-  //   console.log("hello daty");
+  const multiplication = useMemo(() => {
+    console.log("hello daty");
     
-  //   return add*10
-  // },[])
+    return add*10
+  },[])
     
-  const multiplication = () => {
-    console.log("heheh");
+  // const multiplication = () => {
+  //   console.log("heheh");
     
-  }
+  // }
     
   return (
     <>
-      <div>{multiplication()}</div>
+      <div>{multiplication}</div>
       <br />
       <div>{add}</div>
       <br />

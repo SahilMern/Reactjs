@@ -1,28 +1,33 @@
-import React, { useState, useMemo } from "react";
+import { useReducer } from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
+const Test = () => {
+  // Correct spelling of `initialState`
+  const initialState = 85;
 
-  // Expensive calculation function
-  const expensiveComputation = () => {
-    console.log("Calculating..."); // This will log only once
-    let sum = 0;
-    for (let i = 0; i < 1000000000; i++) {
-      sum += i;
+  // Reducer function should handle actions
+  const reducer = (state, action) => {
+    console.log(state, action); // This will log the current state and the action
+
+    switch (action.type) {
+      case "Increment":
+        return state + 1; // Increment the state
+      case "Decrement":
+        return state - 1; // Decrement the state
+      default:
+        return state; // Return the current state if no action matches
     }
-    return sum;
   };
 
-  // Memoizing the result of expensiveComputation
-  const result = useMemo(() => expensiveComputation(), []);  // Empty dependency array means it's calculated only once
+  // useReducer hook to handle state and dispatch
+  const [stateValue, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <div>
-      <p>Count: {count}</p>
-      <p>Computation Result: {result}</p>
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
-    </div>
+    <>
+      <p>State Value: {stateValue}</p> {/* Display current state value */}
+      <button onClick={() => dispatch({ type: "Increment" })}>Plus</button>
+      <button onClick={() => dispatch({ type: "Decrement" })}>Minus</button>
+    </>
   );
-}
+};
 
-export default App;
+export default Test;
