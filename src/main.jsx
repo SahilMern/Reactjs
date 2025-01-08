@@ -10,6 +10,7 @@ import LiftingStateUp from './lifting/LiftingStateUp.jsx'
 import Test from './Test/Test.jsx'
 import Aftermemo from './hooks/useMemo/Aftermemo.jsx'
 import AfterCallback from './hooks/useCallback/AfterCallback.jsx'
+import CallingApi from './Api/CallingApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
     {/* <LiftingStateUp /> */}
     {/* <Aftermemo /> */}
     {/* <AfterCallback /> */}
-    <Test />
+    <CallingApi />
+    {/* <Test /> */}
   </UserProvider>
 )
