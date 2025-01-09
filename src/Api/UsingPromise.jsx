@@ -8,7 +8,8 @@ const UsingPromise = () => {
         res.then((res) =>{
             const data = res.json()
             return data
-        })
+        }).
+
         }
     }, [])
   return (
