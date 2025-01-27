@@ -64,3 +64,5 @@
 // arr.unshift(20)
 // console.log(arr, "ar"); //remvoe
 
+"use strict" 
+console.log(0.0000019073486328125e+1==1.0000019073486328125);
