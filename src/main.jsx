@@ -22,7 +22,8 @@ createRoot(document.getElementById('root')).render(
     {/* <LiftingStateUp /> */}
     {/* <Aftermemo /> */}
     {/* <AfterCallback /> */}
-    <CallingApi />
-    {/* <Test /> */}
+    {/* <CallingApi /> */}
+    <Test />
+    
   </UserProvider>
 )

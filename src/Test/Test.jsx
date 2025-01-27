@@ -1,33 +1,43 @@
-import { useReducer } from "react";
-
 const Test = () => {
-  // Correct spelling of `initialState`
-  const initialState = 85;
-
-  // Reducer function should handle actions
-  const reducer = (state, action) => {
-    console.log(state, action); // This will log the current state and the action
-
-    switch (action.type) {
-      case "Increment":
-        return state + 1; // Increment the state
-      case "Decrement":
-        return state - 1; // Decrement the state
-      default:
-        return state; // Return the current state if no action matches
-    }
-  };
-
-  // useReducer hook to handle state and dispatch
-  const [stateValue, dispatch] = useReducer(reducer, initialState);
-
   return (
-    <>
-      <p>State Value: {stateValue}</p> {/* Display current state value */}
-      <button onClick={() => dispatch({ type: "Increment" })}>Plus</button>
-      <button onClick={() => dispatch({ type: "Decrement" })}>Minus</button>
-    </>
-  );
-};
+    <div>
+      <label htmlFor="shirt">Shirt</label>
+      <input type="checkbox" name="shirt" id="shirt"  />
+      
+      <label htmlFor="jeans">Jeans</label>
+      <input type="checkbox" name="jeans" id="jeans"  />
+      
+      <label htmlFor="shoes">Shoes</label>
+      <input type="checkbox" name="shoes" id="shoes" />
+    </div>
+  )
+}
 
-export default Test;
+export default Test
+
+
+// const Test = () => {
+//   const checkBoxOption = ["shirt ", "jeans", "shoes"];
+//   return (
+//     <div>
+//       {checkBoxOption.map((element, index) => {
+//         return (
+//           <>
+//             <label htmlFor="shirt" >{element}</label>
+//             <input type="checkbox" name="shirt" id="shirt" />
+//           </>
+//         );
+//       })}
+//       {/* <label htmlFor="shirt">Shirt</label>
+//       <input type="checkbox" name="shirt" id="shirt"   />
+      
+//       <label htmlFor="jeans">Jeans</label>
+//       <input type="checkbox" name="jeans" id="jeans"   />
+      
+//       <label htmlFor="shoes">Shoes</label>
+//       <input type="checkbox" name="shoes" id="shoes"  /> */}
+//     </div>
+//   );
+// };
+
+// export default Test;
