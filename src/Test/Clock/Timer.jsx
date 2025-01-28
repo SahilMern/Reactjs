@@ -1,8 +1,7 @@
 
-const Timer = ({}) => {
+const Timer = () => {
   return (
     <>
-    
     </>
   )
 }
