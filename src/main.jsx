@@ -11,6 +11,7 @@ import Test from './Test/Test.jsx'
 import Aftermemo from './hooks/useMemo/Aftermemo.jsx'
 import AfterCallback from './hooks/useCallback/AfterCallback.jsx'
 import CallingApi from './Api/CallingApi.jsx'
+import UseForm from './hooks/useForm/UseForm.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
@@ -23,7 +24,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Aftermemo /> */}
     {/* <AfterCallback /> */}
     {/* <CallingApi /> */}
-    <Test />
+    {/* <Test /> */}
+    <UseForm />
     
   </UserProvider>
 )
