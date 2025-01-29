@@ -1,21 +1,17 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 const Test = () => {
-  const [selectedColor, setSelectedColor] = useState("");
+  const inputRef = useRef();
 
-  const handleChange = (e) => {
-    setSelectedColor(e.target.value);
+  const handleClick = (e) => {
+    e.preventDefault();
+    inputRef.current.style.backgroundColor = "red"; // Apply the style directly
   };
 
   return (
     <div>
-      <select onChange={handleChange} value={selectedColor}>
-        <option value="">Default</option>
-        <option value="red">Red</option>
-        <option value="yellow">Yellow</option>
-        <option value="blue">Blue</option>
-      </select>
-      <p>Selected color: {selectedColor}</p>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>click</button>
     </div>
   );
 };
