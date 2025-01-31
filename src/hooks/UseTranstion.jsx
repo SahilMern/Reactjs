@@ -1,10 +1,10 @@
 import React, { useState, useTransition } from "react";
 
 const UseTransitionExample = () => {
-  const [pending, startTransition] = useTransition();
+  const [pending, startPending] = useTransition();
 
   const handleTransition = () => {
-    startTransition(async() => {
+    startPending(async() => {
       await new Promise(res=> setTimeout(res, 2000))
     });
   };

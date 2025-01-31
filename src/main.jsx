@@ -12,6 +12,7 @@ import Aftermemo from './hooks/useMemo/Aftermemo.jsx'
 import AfterCallback from './hooks/useCallback/AfterCallback.jsx'
 import CallingApi from './Api/CallingApi.jsx'
 import UseForm from './hooks/useForm/UseForm.jsx'
+import UseTransitionExample from './hooks/UseTranstion.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
@@ -25,7 +26,8 @@ createRoot(document.getElementById('root')).render(
     {/* <AfterCallback /> */}
     {/* <CallingApi /> */}
     {/* <Test /> */}
-    <UseForm />
+    {/* <UseForm /> */}
+    {/* <UseTransitionExample /> */}
     
   </UserProvider>
 )
