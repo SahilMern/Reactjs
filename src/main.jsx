@@ -14,6 +14,7 @@ import CallingApi from './Api/CallingApi.jsx'
 import UseForm from './hooks/useForm/UseForm.jsx'
 import UseTransitionExample from './hooks/UseTranstion.jsx'
 import LiftParent from './Test/lifting/LiftParent.jsx'
+import Background from './Design/Background.jsx'
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
@@ -29,6 +30,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Test /> */}
     {/* <UseForm /> */}
     {/* <UseTransitionExample /> */}
-    <LiftParent />
+    {/* <LiftParent /> */}
+    <Background />
   </UserProvider>
 )

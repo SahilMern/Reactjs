@@ -1,0 +1,55 @@
+/* Background styling */
+.background {
+    min-height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Black background */
+    position: relative;
+    overflow: hidden; /* Hide overflow for left background */
+  }
+  
+  /* Left side background design */
+  .left-background {
+    position: absolute;
+    left: -50%; /* Half out of the screen */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(31, 113, 255, 0.8), rgba(9, 13, 252, 0.8)); /* Light purple to violet gradient */
+    filter: blur(100px); /* Blur effect */
+    transform: skewX(-20deg); /* Skew effect for diagonal design */
+    z-index: 0; /* Behind the content */
+  }
+  
+  /* Content box styling */
+  .content {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 1; /* Ensure content is above the left background */
+  }
+  
+  /* Small text styling */
+  .small-text {
+    font-size: 0.875rem; /* 14px */
+    color: #ffffff; /* White color */
+  }
+  
+  /* Big text styling */
+  .big-text {
+    font-size: 2.5rem; /* 40px */
+    font-weight: bold;
+    color: #ffffff; /* White color */
+    margin: 0.5rem 0; /* Spacing */
+  }
+  
+  /* Description text styling */
+  .description {
+    font-size: 1rem; /* 16px */
+    color: #e0e0e0; /* Light gray color */
+    margin-top: 1rem; /* Spacing */
+  }
