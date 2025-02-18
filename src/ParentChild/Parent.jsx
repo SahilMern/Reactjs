@@ -1,16 +1,13 @@
-import { useState } from "react";
-import Child from "./Child";
+import { lazy, Suspense } from "react";
+
+const ChildComponents = lazy(() => import("./Child"));
 
 const Parent = () => {
-  const sendTochild = () => {
-    console.log("Helllo mai to child ko jaa raha hu");
-  };
-  const [add, setAdd] = useState(0);
   return (
     <>
-      <Child functionToChild={sendTochild} />
-      <div>Data {add}</div>
-      <button onClick={() => setAdd(add + 1)}>Add button</button>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ChildComponents />
+      </Suspense>
     </>
   );
 };

@@ -1,29 +1,21 @@
-import { useState } from "react";
+// src/App.js
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment, incrementByAmount } from "./redux/slice";
 
-const Test = () => {
-  const [adddata, setAdddata] = useState(0);
-  const [minData, setminData] = useState(100);
+function Test() {
+  const count = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
 
-  const addition = () => {
-    console.log(adddata * 10);
-  };
-  const add = () => {
-    setAdddata(adddata + 1);
-  };
-  const min = () => {
-    setminData(minData - 1);
-  };
   return (
-    <>
-      {addition()}
-      <div>
-        Test :- {adddata} and {minData}
-      </div>
-      <button onClick={add}>Add</button>
-      <br />
-      <button onClick={min}>min</button>
-    </>
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button onClick={() => dispatch(incrementByAmount(5))}>
+        Increment by 5
+      </button>
+    </div>
   );
-};
+}
 
 export default Test;

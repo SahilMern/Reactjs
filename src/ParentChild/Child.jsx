@@ -1,9 +1,8 @@
-const Child = ({ functionToChild }) => {
-  return (
-    <>
-      <div>Child</div>
-    </>
-  );
-};
 
-export default Child;
+const Child = () => {
+  return (
+    <div>Child</div>
+  )
+}
+
+export default Child
